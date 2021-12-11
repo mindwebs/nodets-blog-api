@@ -1,4 +1,5 @@
 # Blog API
+
 Simple Blog API for dummy projects
 
 ## Schema

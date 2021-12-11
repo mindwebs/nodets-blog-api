@@ -4,7 +4,7 @@ import { Types } from "mongoose";
 
 const AddBlog = async (blog: BlogDto) => {
     try {
-        blog.path = (blog.path).toLowerCase()
+        blog.path = blog.path.toLowerCase();
         //checking pre-existence
         const fetchedBlog = await Blog.findOne({ path: blog.path });
         if (fetchedBlog)

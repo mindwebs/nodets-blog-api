@@ -10,14 +10,11 @@ cloudinary.config({
 const params = {
     folder: "BlogAPI",
     allowedFormats: ["jpeg", "png", "jpg"],
-}
+};
 
 const storage = new CloudinaryStorage({
     cloudinary,
-    params
+    params,
 });
 
-export {
-    cloudinary,
-    storage,
-}
+export { cloudinary, storage };

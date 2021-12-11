@@ -30,7 +30,7 @@ const BlogSchema: Schema<BlogInterface> = new Schema(
         author_icon: {
             type: String,
             required: false,
-        }
+        },
     },
     {
         timestamps: true,
