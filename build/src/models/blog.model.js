@@ -10,7 +10,7 @@ const BlogSchema = new mongoose_1.Schema({
         type: String,
         required: true,
     },
-    content: {
+    html: {
         type: String,
         required: true,
     },
@@ -18,6 +18,18 @@ const BlogSchema = new mongoose_1.Schema({
         type: String,
         required: false,
     },
+    tag: {
+        type: String,
+        required: false,
+    },
+    img: {
+        type: String,
+        required: false,
+    },
+    author_icon: {
+        type: String,
+        required: false,
+    }
 }, {
     timestamps: true,
 });

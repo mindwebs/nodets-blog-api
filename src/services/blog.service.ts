@@ -14,8 +14,11 @@ const AddBlog = async (blog: BlogDto) => {
         const newBlog = new Blog({
             path: blog.path,
             title: blog.title,
-            content: blog.content,
+            html: blog.html,
             author: blog.author,
+            author_icon: blog.author_icon,
+            img: blog.img,
+            tag: blog.tag,
         });
 
         //saving new blog to db

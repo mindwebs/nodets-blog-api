@@ -35,13 +35,22 @@ const BlogService = __importStar(require("../services/blog.service"));
 const responseCreator_1 = __importDefault(require("../utils/responseCreator"));
 const mongoose_1 = require("mongoose");
 const AddBlog = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    req.body.files = req.files;
+    if (!req.body.files.img || !req.body.files.author_icon) {
+        return responseCreator_1.default.generateResponse(res, 400, {}, "Some fields are missing");
+    }
+    const img = req.body.files.img[0];
+    const author_icon = req.body.files.author_icon[0];
     const blog = {
         path: req.body.path,
         title: req.body.title,
-        content: req.body.content,
+        html: req.body.html,
         author: req.body.author,
+        tag: req.body.tag,
+        img: img.path,
+        author_icon: author_icon.path,
     };
-    if (!blog.path || !blog.title || !blog.content)
+    if (!blog.path || !blog.title || !blog.html)
         return responseCreator_1.default.generateResponse(res, 400, {}, "Some fields are missing");
     const { code, message } = yield BlogService.AddBlog(blog);
     return responseCreator_1.default.generateResponse(res, code, {}, message);

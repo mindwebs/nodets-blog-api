@@ -25,8 +25,11 @@ const AddBlog = (blog) => __awaiter(void 0, void 0, void 0, function* () {
         const newBlog = new blog_model_1.default({
             path: blog.path,
             title: blog.title,
-            content: blog.content,
+            html: blog.html,
             author: blog.author,
+            author_icon: blog.author_icon,
+            img: blog.img,
+            tag: blog.tag,
         });
         //saving new blog to db
         yield newBlog.save();
