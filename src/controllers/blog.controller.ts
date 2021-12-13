@@ -5,15 +5,37 @@ import { BlogDto } from "../interfaces/blog.interface";
 import { Types } from "mongoose";
 
 const AddBlog = async (req: Request, res: Response) => {
+    req.body.files = req.files;
+
+    if (!req.body.files.img || !req.body.files.author_icon) {
+        return ResponseCreator.generateResponse(
+            res,
+            400,
+            {},
+            "Some fields are missing"
+        );
+    }
+
+    const img: Express.Multer.File = req.body.files.img[0];
+    const author_icon: Express.Multer.File = req.body.files.author_icon[0];
+
     const blog: BlogDto = {
         path: req.body.path,
         title: req.body.title,
-        content: req.body.content,
+        html: req.body.html,
         author: req.body.author,
+        tag: req.body.tag,
+        img: img.path,
+        author_icon: author_icon.path,
     };
 
-    if (!blog.path || !blog.title || !blog.content)
-        return ResponseCreator.generateResponse(res, 400, {}, "Some fields are missing");
+    if (!blog.path || !blog.title || !blog.html)
+        return ResponseCreator.generateResponse(
+            res,
+            400,
+            {},
+            "Some fields are missing"
+        );
 
     const { code, message } = await BlogService.AddBlog(blog);
     return ResponseCreator.generateResponse(res, code, {}, message);
