@@ -11,7 +11,7 @@ const BlogSchema: Schema<BlogInterface> = new Schema(
             type: String,
             required: true,
         },
-        html: {
+        content: {
             type: String,
             required: true,
         },

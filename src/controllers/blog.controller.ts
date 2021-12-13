@@ -22,14 +22,14 @@ const AddBlog = async (req: Request, res: Response) => {
     const blog: BlogDto = {
         path: req.body.path,
         title: req.body.title,
-        html: req.body.html,
+        content: req.body.content,
         author: req.body.author,
         tag: req.body.tag,
         img: img.path,
         author_icon: author_icon.path,
     };
 
-    if (!blog.path || !blog.title || !blog.html)
+    if (!blog.path || !blog.title || !blog.content)
         return ResponseCreator.generateResponse(
             res,
             400,
