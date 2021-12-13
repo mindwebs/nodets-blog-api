@@ -14,7 +14,7 @@ const AddBlog = async (blog: BlogDto) => {
         const newBlog = new Blog({
             path: blog.path,
             title: blog.title,
-            html: blog.html,
+            content: blog.content,
             author: blog.author,
             author_icon: blog.author_icon,
             img: blog.img,
