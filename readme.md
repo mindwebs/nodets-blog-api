@@ -6,9 +6,9 @@
     <br />
     <a href="https://mwv-blogapi.herokuapp.com">Deployed Application</a>
     ·
-    <a href="https://github.com/mindwebs/envion-api/issues">Report Bug</a>
+    <a href="https://github.com/mindwebs/blog-api/issues">Report Bug</a>
     ·
-    <a href="https://github.com/mindwebs/envion-api/issues">Request Feature</a>
+    <a href="https://github.com/mindwebs/blog-api/issues">Request Feature</a>
   </p>
 </div>
 
