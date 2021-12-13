@@ -1,6 +1,16 @@
-# Blog API
+<div align="center">
+  <h1 align="center">Blog API</h1>
 
-Simple Blog API for dummy projects
+  <p align="center">
+    A simple blog api for dummy projects
+    <br />
+    <a href="https://mwv-blogapi.herokuapp.com">Deployed Application</a>
+    ·
+    <a href="https://github.com/mindwebs/envion-api/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/mindwebs/envion-api/issues">Request Feature</a>
+  </p>
+</div>
 
 ## Schema
 
@@ -30,3 +40,19 @@ Fetches a blog with the given path. For example, a GET request on `api/path/test
 
 4. GET /api/id/{id}
 Fetches a blog with the given object id. For example, a GET request on `api/id/1` with return the blog with `_id = 1`
+
+## Running the server locally
+
+The first 3 steps below are to set the project up in your local environment, which is to be done just once at the beggining.
+
+#### STEP 1: 
+Cloning the repository
+
+#### STEP 2:
+Creating a .env file with the same fields as mentioned in the `.env.example` file
+
+#### STEP 3:
+Installing node packages using the command `npm i`
+
+#### STEP 4:
+Running the backend server using the command `npm start`.

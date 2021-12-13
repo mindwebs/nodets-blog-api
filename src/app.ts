@@ -16,6 +16,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", BlogRouter);
 
+app.get("/", async (req, res) => res.send(`BlogAPI server running successfully since ${new Date()}`));
+
 // Start the express server
 app.listen(PORT, () => {
     console.log(`Server Started Listening at ${PORT}`);
