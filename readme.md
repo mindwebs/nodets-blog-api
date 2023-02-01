@@ -52,7 +52,10 @@ Cloning the repository
 Creating a .env file with the same fields as mentioned in the `.env.example` file
 
 #### STEP 3:
-Installing node packages using the command `npm i`
+Installing node packages using the command `npm i`.
 
 #### STEP 4:
+Use the Command tsc for creating the build folder which will convert the .ts files to .js.
+
+#### STEP 5:
 Running the backend server using the command `npm start`.
